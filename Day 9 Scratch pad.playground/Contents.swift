@@ -84,12 +84,15 @@ let reverseSort = team.sorted{ $0 > $1}
 print(reverseSort)
 
 
-
+// You can also have logic in the closure as well $0 in this example represents the index of the array
+// Here is an exmaple $0 % 2 != 0. This checks if a value in the array is NOT divisable by 2 and returns the value
 let tOnly = team.filter { $0.hasPrefix("T")}
 print(tOnly)
 
 
 // Return all the values from the array in upper case
+// This doesn't have to be the format that you enter the closure. You can do a conversion for example
+// { String($0) } Would convert each element of the array from an int or double to a string
 let uppercaseTeam = team.map { $0.uppercased()}
 print(uppercaseTeam)
 
